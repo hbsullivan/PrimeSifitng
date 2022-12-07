@@ -35,5 +35,27 @@ namespace PrimeSifting.Tests
        CollectionAssert.AreEqual(expected, actual);
     // newList = {2, 3, 4, 5, 6, 7, 8, 9, 10}
     }
+
+    [TestMethod]
+    public void FindPrime_SetEqualToTwo_True()
+    {
+      List<int> testList = new List<int> {2, 3, 4, 5, 6, 7, 8, 9, 10};
+      int prime = 2;
+      bool result = (testList[0] == prime);
+      Prime newItem = new Prime();
+      Assert.AreEqual(true, Prime.FindPrime(testList));
+// testList.FindPrime();
+    }
+
+    [TestMethod]
+    public void MultiplesOfPrime_RemoveMultiplesOfPrime_NumberList()
+    {
+      List<int> testList = new List<int> {2, 3, 4, 5, 6, 7, 8, 9, 10};
+      int prime = 2;
+      List<int> expected = new List<int> {3, 5, 7, 9};
+      List<int> actual = Prime.MultiplesOfPrime(testList);
+      CollectionAssert.AreEqual(expected, actual);
+
+    }
   }
 }

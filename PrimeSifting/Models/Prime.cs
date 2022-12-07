@@ -16,5 +16,24 @@ namespace PrimeSifting.Models
       }
        return numberList;
     }
+
+    public static bool FindPrime(List<int> numberList)
+    {
+      int prime = 2;
+      if (numberList.Contains(prime))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
+    public static List<int> MultiplesOfPrime(List<int> numberList)
+    {
+      int prime = 2;
+      return new List<int> {3, 5};
+    }
   }
 }
