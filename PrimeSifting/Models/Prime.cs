@@ -7,7 +7,14 @@ namespace PrimeSifting.Models
   {
     public static List<int> GenerateNumList(int num)
     {
-       return new List<int> {1, 2, 3};
+      List<int> numberList = new List<int> {};
+      int counter = 2;
+      for (int i = 0; i < (num - 1); i++) 
+      {
+        numberList.Add(counter); 
+        counter++;
+      }
+       return numberList;
     }
   }
 }
